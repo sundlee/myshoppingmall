@@ -12,10 +12,12 @@ function displayItems(items) {
   container.innerHTML = items.map((item) => createHTMLString(item)).join('');
 }
 
+const baseUrl = '/myshoppingmall';
+// const baseUrl = '';
 function createHTMLString(item) {
   return `
       <li class="item">
-        <img src="${item.image}" alt="${item.type}" class="item__thumbnail" />
+        <img src="${baseUrl}${item.image}" alt="${item.type}" class="item__thumbnail" />
         <span class="item__description">${item.gender}, ${item.size}</span>
       </li>
   `;
